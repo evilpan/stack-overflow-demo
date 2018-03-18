@@ -2,27 +2,27 @@
 
 [栈溢出漏洞的利用和缓解][blog]中所使用到的代码和exploit.
 
-## Build victims:
+## 编译victim:
     
     make
 
-## Tips:
+## 小tips:
 
-### common
+### 通用
 
-spawn a new shell that disable ASLR:
+新建一个禁用ASLR的shell:
 
     setarch `uname -m` -R /bin/bash
 
-print load address of shared objects:
+查看动态链接库准确的加载基址:
 
     LD_TRACE_LOADED_OBJECTS=1 /bin/ls
 
-print ELF headers:
+查看ELF头:
 
     readelf -h /bin/ls
 
-print symbols:
+查看符号:
 
     readelf -s /lib/i386-linux-gnu/libc.so.6
     rabin2 -s /lib/i386-linux-gnu/libc.so.6
@@ -30,27 +30,27 @@ print symbols:
 
 ### radare2
 
-do some math:
+数学运算:
 
     rax2 =16 0xf7752000+0x8888*2
 
-characters to hex string:
+字符串转十六进制:
 
     rax2 -S helloworld
 
-generate De Brujin Sequence:
+生成De Brujin序列:
 
     ragg2 -P 40 -r
 
-assembly:
+汇编:
 
     rasm2 -a x86 -b 32 "jmp esp"
 
-disassembly:
+反汇编:
 
     rasm2 -a x86 -b 32 -d "ffe4"
 
-find string in binary:
+在二进制文件中查找字符串:
 
     rafind2 -s "/bin/sh" /lib/i386-linux-gnu/libc.so.6
 
