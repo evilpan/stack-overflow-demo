@@ -1,6 +1,6 @@
 # Stack Overflow Demo
 
-博客[栈溢出漏洞的利用和缓解][blog]中所使用到的代码和exploit.
+[栈溢出漏洞的利用和缓解][blog]中所使用到的代码和exploit.
 
 ## Build victims:
     
@@ -55,4 +55,4 @@ find string in binary:
     rafind2 -s "/bin/sh" /lib/i386-linux-gnu/libc.so.6
 
 
-[blog]:https://www.pppan.net/blog/detail/2018-03-17-exploit-the-stack 
+[blog]:#
