@@ -55,4 +55,4 @@
     rafind2 -s "/bin/sh" /lib/i386-linux-gnu/libc.so.6
 
 
-[blog]:https://www.pppan.net/blog/detail/2018-03-17-exploit-the-stack
+[blog]:https://evilpan.com/2018/03/17/exploit-the-stack/
